@@ -1,0 +1,237 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+html, body {
+  font-family: 'Malgun Gothic', sans-serif;
+}
+
+header nav.cherry-header-nav {
+  width: 100%;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  padding: 20px 30px;
+  background: #fff;
+  z-index: 999;
+}
+
+header nav.cherry-header-nav.shadow {
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, .05);
+}
+
+header nav.cherry-header-nav ul.cherry-header-wrap {
+  display: table;
+  position: relative;
+}
+
+header nav.cherry-header-nav ul.cherry-header-wrap li {
+  display: table-cell;
+}
+
+header nav.cherry-header-nav ul.cherry-header-wrap li.logo-box {
+
+}
+
+header nav.cherry-header-nav ul.cherry-header-wrap li.logo-box img {
+  width: 400px;
+  height: 106.08px;
+}
+
+header nav.cherry-header-nav ul.cherry-header-wrap li.menus {
+  text-align: right;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+header nav.cherry-header-nav ul.cherry-header-wrap li.menus a {
+  margin-left: 30px;
+  color: #000;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+header nav.cherry-header-nav.mobile {
+  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+header nav.cherry-header-nav.mobile ul.cherry-header-wrap {
+  width: 100%;
+}
+
+header nav.cherry-header-nav.mobile ul.cherry-header-wrap li {
+  position: relative;
+}
+
+header nav.cherry-header-nav.mobile ul.cherry-header-wrap li.logo-box img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+header nav.cherry-header-nav.mobile ul.cherry-header-wrap li.logo-box a {
+  height: 54px;
+  text-align: left;
+}
+
+header nav.cherry-header-nav.mobile .wrapper-hamburger {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+header nav.cherry-header-nav.mobile .wrapper-hamburger i {
+  cursor: pointer;
+}
+
+/* SIDE-MENU */
+.side-menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  left: -100%;
+  top: 0;
+  transition: left .3s;
+  z-index: 1000;
+}
+
+.side-menu.active {
+  left: 0;
+}
+
+.side-menu .side-menu-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  overflow: hidden;
+}
+
+.side-menu .side-menu-content ul {
+  margin-top: 30px;
+}
+
+.side-menu .side-menu-content ul li {
+  padding: 20px;
+}
+
+.side-menu .side-menu-content .wrapper-close {
+  right: 15px;
+  top: 15px;
+  position: absolute;
+}
+
+.side-menu .side-menu-content .wrapper-close i {
+  cursor: pointer;
+}
+
+/* GLOBAL */
+.pc {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+
+.full-width {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+.content-width {
+  width: 1060px;
+  margin: 0 auto;
+}
+
+/* FOOTER */
+footer {
+  text-align: right;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-top: 1px solid #efefef;
+}
+
+footer img {
+  width: 300px;
+}
+
+
+/*
+SCROLL TO TOP
+*/
+.wrapper-scroll-to-top {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: -50px;
+  right: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 1);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s ease;
+  cursor: pointer;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.wrapper-scroll-to-top.active {
+  bottom: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .pc {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .full-width {
+    width: 100%;
+  }
+
+  .content-width {
+    width: 100%;
+  }
+
+  [class*=col] {
+    width: 100%;
+  }
+
+  section:first-child {
+    margin-top: 114px !important;
+  }
+
+  header nav.cherry-header-nav.mobile ul.cherry-header-wrap li.logo-box img {
+    min-width: 200px;
+    width: 200px;
+  }
+
+  header nav.cherry-header-nav.mobile {
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+  }
+
+  header nav.cherry-header-nav.mobile ul.cherry-header-wrap li {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  footer img {
+    width: 220px;
+  }
+}
