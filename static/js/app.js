@@ -10,16 +10,14 @@ app.filter('nl2br', function ($sce) {
 });
 
 app.controller('globalCtrl', function ($scope) {
-  $scope.sideMenu = {
-    active: false
-  };
+  $scope.sidemenu = false;
 
   /**
    * activeSideMenu
    * @return {[type]} [description]
    */
   $scope.activeSideMenu = function () {
-    $scope.sideMenu.active = true;
+    $scope.sidemenu = true;
   }
 
   /**
@@ -27,7 +25,7 @@ app.controller('globalCtrl', function ($scope) {
    * @return {void}
    */
   $scope.disableSideMenu = function () {
-    $scope.sideMenu.active = false;
+    $scope.sidemenu = false;
   }
 });
 

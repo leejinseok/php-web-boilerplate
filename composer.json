@@ -1,5 +1,6 @@
 {
     "require": {
-        "jasongrimes/paginator": "^1.0"
+        "jasongrimes/paginator": "^1.0",
+        "phpmailer/phpmailer": "^6.0"
     }
 }
