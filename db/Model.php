@@ -1,8 +1,13 @@
 <?php
 class Model {
   protected $con;
-  protected function __construct ($host, $user, $pwd, $db) {
-    $this->con = new mysqli($host, $user, $pwd, $db);
+  protected $host = 'localhost';
+  protected $user = '';
+  protected $pwd = '';
+  protected $db = '';
+
+  protected function __construct () {
+    $this->con = new mysqli($this->host, $this->user, $this->pwd, $this->db);
     if ($this->con->connect_error) {
       die ('Connect Error (' . $this->con->connect_errno . ') '
             . $this->con->connect_error);
