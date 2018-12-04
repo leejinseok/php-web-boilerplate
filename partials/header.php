@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="naver-site-verification" content="b4992f218b0f043cd620cfba6d4f7ddab0614bb7"/>
+  <meta name="naver-site-verification" content=""/>
   <meta name="description" content="">
   <meta property="og:title" content="">
   <meta property="og:url" content="">
@@ -23,4 +23,5 @@
 
   <title>PHP Web Boilerplate</title>
 </head>
-<body ng-app="myApp" ng-controller="globalCtrl">
+<body>
+<div id="app">

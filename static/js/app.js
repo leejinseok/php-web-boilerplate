@@ -1,33 +1,15 @@
-var app = angular.module("myApp", []);
+Vue.config.devtools = true;
 
-app.filter('nl2br', function ($sce) {
-  return function(msg, is_xhtml) {
-    var is_xhtml = is_xhtml || true;
-    var breakTag = (is_xhtml) ? '<br />' : '<br>';
-    var msg = (msg + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1'+ breakTag +'$2');
-    return $sce.trustAsHtml(msg);
+var mixin = {
+  data: {
+    menuModal: false,
+  },
+  methods: {
+  },
+  created: function () {
+    console.log('mixin hook called')
   }
-});
-
-app.controller('globalCtrl', function ($scope) {
-  $scope.sidemenu = false;
-
-  /**
-   * activeSideMenu
-   * @return {[type]} [description]
-   */
-  $scope.activeSideMenu = function () {
-    $scope.sidemenu = true;
-  }
-
-  /**
-   * disableSideMenu
-   * @return {void}
-   */
-  $scope.disableSideMenu = function () {
-    $scope.sidemenu = false;
-  }
-});
+}
 
 /**
  * [getParameterByName description]
@@ -43,15 +25,6 @@ function getParameterByName (name, url) {
     if (!results) return null;
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
-}
-
-/**
- * get angular scope
- * @param {String} ctrlName
- */
-function getScope (ctrlName) {
-  var sel = '[ng-controller="' + ctrlName + '"]';
-  return angular.element(sel).scope();
 }
 
 
